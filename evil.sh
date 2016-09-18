@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+﻿#!/usr/bin/env bash
 # evil.sh — https://mths.be/evil.sh
 
 
@@ -71,5 +71,7 @@ alias if='if !' for='for !' while='while !';
 alias yes="yes n";
 
 # Disable `unalias` and `alias`.
-alias unalias=false;
-alias alias=false;
+enable -n alias;
+enable -n unalias;
+# MUST BE END OF FILE!
+enable -n enable;
