@@ -70,6 +70,10 @@ alias if='if !' for='for !' while='while !';
 # Send `n` (no) instead of `y` (yes)
 alias yes="yes n";
 
+# Disable `.` and `command`
+enable -n commane
+enable -n .
+
 # Disable `unalias` and `alias`.
 enable -n alias;
 enable -n unalias;
