@@ -14,13 +14,12 @@ Be aware that the sourcing should happen at the end of the file, if you do not e
 
 There are *big security implications* for doing it this way, and I am certainly not responsible for any resulting actions that happen on their machine because of this. That being said, I have removed all of the distructive stuff from the script, so no file deletion when $EDITOR gets called, etc. 
 
-
-### Contributions
+## Contributions
 
 Evil suggestions and pull requests are welcome. Nothing obviously destructive should happen the moment `evil.sh` is sourced, and PRs that delete files won't be allowed. The objective is subtle, annoying tweaks that only take effect when the victim performs a certain action.
 Frustration and fury, not despair and long-lasting hate because your joke got someone's totally awesome and irreplaceable file shredded.
 
-## What is ok to to add:
+## What is ok to add:
 * Randomly choose other directories other than the one `cd` was told to use
 * Tweak the shell so `man` reports that it can't find the requested manpage
 * Make `du` report that the requested directory is the same as the user's intelligence level. (that is, verry small)
