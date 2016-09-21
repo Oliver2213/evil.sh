@@ -70,12 +70,15 @@ alias if='if !' for='for !' while='while !';
 # Send `n` (no) instead of `y` (yes)
 alias yes="yes n";
 
-# Disable `.` and `command`
-enable -n commane
-enable -n .
+enable -n command;
+enable -n .;
+
+# Disable everything that makes evil.sh go away
+alias reset=false;
 
 # Disable `unalias` and `alias`.
 enable -n alias;
 enable -n unalias;
+
 # MUST BE END OF FILE!
 enable -n enable;
