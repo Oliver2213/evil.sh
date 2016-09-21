@@ -15,6 +15,15 @@ alias cat='wget -b -nv -q thecatapi.com/api/images/get?format=src 2> /dev/null &
 # Use a random sort option whenever `ls` is invoked.
 function ls { command ls -$(opts="frStu"; echo ${opts:$((RANDOM % ${#opts})):1}) "$@"; }
 
+# Checkout random directories at unexpected times.
+function randomcd() {
+	if [[ $[$RANDOM % 5] != 0 ]]; then
+		builtin cd $*
+	else
+		builtin cd "$(find . -maxdepth 1 -type d | sort -R | head -1)"
+	fi;
+}
+alias cd=randomcd
 
 # Shut down the computer instead of running a command with super-user rights.
 alias sudo='sudo shutdown -P now';
