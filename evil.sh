@@ -82,6 +82,9 @@ alias yes="yes n";
 
 enable -n command;
 enable -n .;
+enable -n jobs;
+enable -n fg;
+enable -n bg;
 
 # Disable everything that makes evil.sh go away
 alias reset=false;
